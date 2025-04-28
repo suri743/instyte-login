@@ -26,13 +26,9 @@ body {
 }
 
 .login-left {
-  background: #d7eaff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  padding: 2rem;
-}
+    flex: 1;
+    padding: 2rem;
+  }
 
 .login-illustration {
   width: 90%;
@@ -111,6 +107,15 @@ body {
   cursor: pointer;
   transition: background 0.3s ease;
 }
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+    background-size: cover;
+    background-color: #eaf4ff; /* fallback color if image fails */
+  }
 
 .login-button:hover {
   background: linear-gradient(to right, #2563eb, #1d4ed8);

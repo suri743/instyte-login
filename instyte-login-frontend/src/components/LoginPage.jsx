@@ -1,5 +1,3 @@
-// LoginPage.js
-
 import React, { useState } from 'react';
 import './LoginPage.css';
 
@@ -27,10 +25,10 @@ function LoginPage() {
   };
 
   return (
-    <div className="login-container">
-      <div className="login-card">
+    <div className="login-page">
+      <div className="login-container">
         <div className="login-left">
-          <img src="/assets/login-illustration.png" alt="Login Illustration" className="login-illustration" />
+          <img src="/assets/login-illustration.png" alt="Login Illustration" className="login-image" />
         </div>
         <div className="login-right">
           <h2 className="welcome-text">Welcome</h2>
