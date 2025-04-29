@@ -26,12 +26,17 @@ function LoginPage() {
 
   return (
     <div className="login-page">
-      <div className="login-container">
-        <div className="login-left">
-          <img src="/assets/login-illustration.png" alt="Login Illustration" className="login-image" />
-        </div>
+      <div className="login-container" style={{
+        backgroundImage: "url('/assets/login-illustration.png')",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "left center", 
+        backgroundSize: "auto 100%",          
+        backgroundAttachment: "scroll" 
+        }}>
         <div className="login-right">
-          <h2 className="welcome-text">Welcome</h2>
+        <img src="/assets/logo.jpeg" alt="Logo" 
+        style={{ width: '80px', height: '80px', marginBottom: '1rem' }}/>
+          <h2 className="welcome-text">Muzigal Nellore</h2>
           <p className="subtitle">Sign in to your account</p>
           <form className="login-form" onSubmit={handleSubmit}>
             <div className="input-group">

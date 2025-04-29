@@ -7,7 +7,6 @@
     <list default="true" id="9af6e2be-ecef-4cc2-8b60-d3934bc4471e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/instyte-login-frontend/src/components/LoginPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/instyte-login-frontend/src/components/LoginPage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/instyte-login-frontend/src/components/LoginPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/instyte-login-frontend/src/components/LoginPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instyte-login-frontend/src/components/assets/login-illustration.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1745846648026</updated>
       <workItem from="1745846650834" duration="2823000" />
-      <workItem from="1745849732660" duration="7195000" />
+      <workItem from="1745849732660" duration="8437000" />
     </task>
     <servers />
   </component>
