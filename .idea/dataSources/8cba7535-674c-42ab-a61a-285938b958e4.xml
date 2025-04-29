@@ -3,15 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <Grants>1||-9223372036854775808|c|G
-1||10|c|G
-1||10|C|G
-1||10|T|G
-14224||-9223372036854775808|c|G
-14224||10|c|G
-14224||10|C|G
-14224||10|T|G</Grants>
-      <IntrospectionStateNumber>1047</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1058</IntrospectionStateNumber>
       <ServerVersion>14.17</ServerVersion>
       <StartupTime>1745803168</StartupTime>
       <TimeZones>true ACDT
@@ -809,7 +801,7 @@ false Zulu
 13859||10|C|G
 13859||-9223372036854775808|U|G
 13859||10|U|G</Grants>
-      <IntrospectionStateNumber>1047</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1058</IntrospectionStateNumber>
       <ObjectId>16571</ObjectId>
       <OwnerName>I548332</OwnerName>
     </database>
@@ -4252,8 +4244,8 @@ false Zulu
     <schema id="265" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>1047</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2025-04-28.14:00:25</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>1058</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2025-04-29.08:20:58</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>526</StateNumber>
       <OwnerName>I548332</OwnerName>
@@ -4266,46 +4258,68 @@ false Zulu
       <StoredType>bigint|0s</StoredType>
       <OwnerName>I548332</OwnerName>
     </sequence>
-    <table id="267" parent="265" name="authorities">
+    <sequence id="267" parent="265" name="page_info_id_seq">
+      <ObjectId>16605</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>1057</StateNumber>
+      <StoredType>bigint|0s</StoredType>
+      <OwnerName>I548332</OwnerName>
+    </sequence>
+    <sequence id="268" parent="265" name="users_id_seq">
+      <ObjectId>16597</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>1048</StateNumber>
+      <StoredType>bigint|0s</StoredType>
+      <OwnerName>I548332</OwnerName>
+    </sequence>
+    <table id="269" parent="265" name="authorities">
       <ObjectId>16580</ObjectId>
       <StateNumber>1009</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>I548332</OwnerName>
     </table>
-    <table id="268" parent="265" name="customer">
+    <table id="270" parent="265" name="customer">
       <ObjectId>16589</ObjectId>
       <StateNumber>1038</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>I548332</OwnerName>
     </table>
-    <table id="269" parent="265" name="users">
+    <table id="271" parent="265" name="page_info">
+      <ObjectId>16606</ObjectId>
+      <StateNumber>1057</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>I548332</OwnerName>
+    </table>
+    <table id="272" parent="265" name="users">
       <ObjectId>16573</ObjectId>
       <StateNumber>1049</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>I548332</OwnerName>
     </table>
-    <column id="270" parent="267" name="username">
+    <column id="273" parent="269" name="username">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>1009</StateNumber>
       <StoredType>varchar(50)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="271" parent="267" name="authority">
+    <column id="274" parent="269" name="authority">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1009</StateNumber>
       <StoredType>varchar(50)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <foreign-key id="272" parent="267" name="fk_authorities_users">
+    <foreign-key id="275" parent="269" name="fk_authorities_users">
       <ColNames>username</ColNames>
       <ObjectId>16583</ObjectId>
       <StateNumber>1009</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>16573</RefTableId>
     </foreign-key>
-    <index id="273" parent="267" name="ix_auth_username">
+    <index id="276" parent="269" name="ix_auth_username">
       <ColNames>username
 authority</ColNames>
       <ObjectId>16588</ObjectId>
@@ -4319,32 +4333,32 @@ default</CollationNames>
       <CollationParentNames>pg_catalog
 pg_catalog</CollationParentNames>
     </index>
-    <column id="274" parent="268" name="id">
+    <column id="277" parent="270" name="id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>1038</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <TypeId>20</TypeId>
     </column>
-    <column id="275" parent="268" name="email">
+    <column id="278" parent="270" name="email">
       <Position>2</Position>
       <StateNumber>1038</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="276" parent="268" name="pwd">
+    <column id="279" parent="270" name="pwd">
       <Position>3</Position>
       <StateNumber>1038</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="277" parent="268" name="role">
+    <column id="280" parent="270" name="role">
       <Position>4</Position>
       <StateNumber>1038</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <index id="278" parent="268" name="customer_pkey">
+    <index id="281" parent="270" name="customer_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16594</ObjectId>
@@ -4353,35 +4367,78 @@ pg_catalog</CollationParentNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="279" parent="268" name="customer_pkey">
+    <key id="282" parent="270" name="customer_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16595</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1038</StateNumber>
       <UnderlyingIndexId>16594</UnderlyingIndexId>
     </key>
-    <column id="280" parent="269" name="username">
+    <column id="283" parent="271" name="id">
+      <DefaultExpression>nextval(&apos;page_info_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>1057</StateNumber>
+      <StoredType>bigint|0s</StoredType>
+      <SequenceId>16605</SequenceId>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="284" parent="271" name="host_name">
+      <Position>2</Position>
+      <StateNumber>1057</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="285" parent="271" name="img_url">
+      <Position>3</Position>
+      <StateNumber>1057</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="286" parent="271" name="title">
+      <Position>4</Position>
+      <StateNumber>1057</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="287" parent="271" name="page_info_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16612</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>1057</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="288" parent="271" name="page_info_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16613</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>1057</StateNumber>
+      <UnderlyingIndexId>16612</UnderlyingIndexId>
+    </key>
+    <column id="289" parent="272" name="username">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>1007</StateNumber>
       <StoredType>varchar(50)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="281" parent="269" name="password">
+    <column id="290" parent="272" name="password">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1007</StateNumber>
       <StoredType>varchar(500)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="282" parent="269" name="enabled">
+    <column id="291" parent="272" name="enabled">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>1007</StateNumber>
       <StoredType>boolean|0s</StoredType>
       <TypeId>16</TypeId>
     </column>
-    <column id="283" parent="269" name="id">
+    <column id="292" parent="272" name="id">
       <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>4</Position>
@@ -4390,13 +4447,13 @@ pg_catalog</CollationParentNames>
       <SequenceId>16597</SequenceId>
       <TypeId>20</TypeId>
     </column>
-    <column id="284" parent="269" name="email">
+    <column id="293" parent="272" name="email">
       <Position>5</Position>
       <StateNumber>1049</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <index id="285" parent="269" name="users_pkey">
+    <index id="294" parent="272" name="users_pkey">
       <ColNames>username</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16578</ObjectId>
@@ -4408,7 +4465,7 @@ pg_catalog</CollationParentNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="286" parent="269" name="users_pkey">
+    <key id="295" parent="272" name="users_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16579</ObjectId>
       <Primary>1</Primary>

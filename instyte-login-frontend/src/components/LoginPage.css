@@ -28,6 +28,7 @@ body, html {
     background-size: cover;
     position: relative;
     overflow: hidden;
+    padding: 1rem;
 }
 
 /* LOGIN CARD FLOATING ON BACKGROUND */
@@ -46,11 +47,13 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-width: 520px;
+    
 }
 
 /* Login form styles */
 .welcome-text {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: #1e293b;
     text-align: center;
@@ -124,4 +127,31 @@ body, html {
 
 .login-button:hover {
     background: linear-gradient(to right, #2563eb, #1d4ed8);
+    @media (max-width: 768px) {
+        .login-right {
+          position: static;
+          transform: none;
+          margin: 2rem auto;
+          width: 90%;
+          min-height: auto;
+          padding: 2rem;
+        }
+        
+        .welcome-text {
+          font-size: 2rem;
+        }
+      
+        .subtitle {
+          font-size: 1rem;
+        }
+      
+        .login-form {
+          gap: 1rem;
+        }
+      
+        .login-button {
+          padding: 0.6rem;
+          font-size: 0.9rem;
+        }
+      }
 }

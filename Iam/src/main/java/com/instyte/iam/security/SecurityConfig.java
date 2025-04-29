@@ -23,7 +23,7 @@ public class SecurityConfig {
             .headers(headers -> headers
                 .frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin))
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers(new AntPathRequestMatcher("/api/auth/login")).permitAll()
+                .requestMatchers("/auth/login", "auth/token").permitAll()
                 .anyRequest().authenticated());
         return http.build();
     }
