@@ -3,7 +3,6 @@ package com.instyte.iam.service;
 import com.instyte.iam.entity.Users;
 import com.instyte.iam.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;

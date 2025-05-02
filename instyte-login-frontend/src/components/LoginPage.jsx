@@ -4,7 +4,7 @@ import './LoginPage.css';
 function LoginPage() {
 
   const [siteInfo, setSiteInfo] = useState({
-    title: 'Instyte',
+    title: 'Welcom Back',
     logoUrl: '/assets/logo.png', // Default logo initially
   });
   const [rememberMe, setRememberMe] = useState(false);
@@ -62,7 +62,7 @@ function LoginPage() {
   return (
     <div className="login-page">
       <div className="login-container" style={{
-        backgroundImage: "url('/assets/login-illustration.png')",
+        backgroundImage: "url('/assets/login_back.svg')",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "left center", 
         backgroundSize: "auto 100%",          

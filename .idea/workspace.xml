@@ -5,18 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9af6e2be-ecef-4cc2-8b60-d3934bc4471e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Iam/src/main/java/com/instyte/iam/entity/PageInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Iam/src/main/java/com/instyte/iam/repository/PageInfoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Iam/src/main/java/com/instyte/iam/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Iam/src/main/java/com/instyte/iam/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Iam/src/main/java/com/instyte/iam/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Iam/src/main/java/com/instyte/iam/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Iam/target/classes/com/instyte/iam/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Iam/target/classes/com/instyte/iam/controller/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Iam/src/main/java/com/instyte/iam/service/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Iam/src/main/java/com/instyte/iam/service/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Iam/target/classes/com/instyte/iam/IamApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/Iam/target/classes/com/instyte/iam/IamApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Iam/target/classes/com/instyte/iam/entity/PageInfo$PageInfoBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/Iam/target/classes/com/instyte/iam/entity/PageInfo$PageInfoBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Iam/target/classes/com/instyte/iam/entity/PageInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/Iam/target/classes/com/instyte/iam/entity/PageInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Iam/target/classes/com/instyte/iam/entity/Users$UsersBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/Iam/target/classes/com/instyte/iam/entity/Users$UsersBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Iam/target/classes/com/instyte/iam/entity/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/Iam/target/classes/com/instyte/iam/entity/Users.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Iam/target/classes/com/instyte/iam/repository/PageInfoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/Iam/target/classes/com/instyte/iam/repository/PageInfoRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Iam/target/classes/com/instyte/iam/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/Iam/target/classes/com/instyte/iam/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Iam/target/classes/com/instyte/iam/security/JwtAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/Iam/target/classes/com/instyte/iam/security/JwtAuthenticationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Iam/target/classes/com/instyte/iam/security/JwtUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/Iam/target/classes/com/instyte/iam/security/JwtUtils.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Iam/target/classes/com/instyte/iam/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/Iam/target/classes/com/instyte/iam/security/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instyte-login-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/instyte-login-frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instyte-login-frontend/public/assets/logo.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/instyte-login-frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/instyte-login-frontend/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instyte-login-frontend/src/components/LoginPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/instyte-login-frontend/src/components/LoginPage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instyte-login-frontend/src/components/LoginPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/instyte-login-frontend/src/components/LoginPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instyte-login-frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/instyte-login-frontend/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Iam/target/classes/com/instyte/iam/service/CustomUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Iam/target/classes/com/instyte/iam/service/CustomUserDetailsService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,33 +46,33 @@
     <option name="sortByType" value="true" />
     <option name="sortKey" value="BY_TYPE" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.iam [clean].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.IamApplication.executor": "Run",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/I548332/Downloads/instyte-login-project",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.iam [clean].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.IamApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/I548332/Downloads/instyte-login-project&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql",
-      "h2"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;,
+      &quot;h2&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.instyte.iam.service" />
@@ -103,7 +105,11 @@
       <workItem from="1745846650834" duration="2823000" />
       <workItem from="1745849732660" duration="8437000" />
       <workItem from="1745906702266" duration="133000" />
-      <workItem from="1745914409794" duration="4420000" />
+      <workItem from="1745914409794" duration="5178000" />
+      <workItem from="1745935588850" duration="1543000" />
+      <workItem from="1745939906918" duration="435000" />
+      <workItem from="1745944170452" duration="1971000" />
+      <workItem from="1746005730741" duration="13000" />
     </task>
     <servers />
   </component>
@@ -115,12 +121,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Iam/src/main/java/com/instyte/iam/service/CustomUserDetailsService.java</url>
-          <line>25</line>
+          <line>24</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Iam/src/main/java/com/instyte/iam/controller/AuthController.java</url>
-          <line>52</line>
+          <line>34</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
