@@ -77,7 +77,7 @@ body, html {
 
 /* ICONS */
 .material-icons {
-  color: #94a3b8;
+  color: #62c4ff;
   font-size: 22px;
 }
 
@@ -133,6 +133,22 @@ body, html {
   display: flex;
   align-items: center;
 }
+
+/* Add to LoginPage.css */
+.alt-button {
+  margin-top: 0.75rem;
+  background: white;
+  border: 1px solid #4fb897;
+  color: #1e293b;
+  transition: all 0.3s ease;
+}
+
+.alt-button:hover {
+  background: #f1f5f9;
+  border-color: #62c4ff;
+  color: #1e293b;
+}
+
 
 /* FOOTER */
 .login-footer {
