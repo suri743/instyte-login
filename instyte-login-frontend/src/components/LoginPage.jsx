@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './LoginPage.css';
 import LoginCard from './LoginCard';
-import ContactPopup from './ContactPopup';
+import AnnouncementsPanel from './AnnouncementsPanel';
 
 function LoginPage() {
   const [siteInfo, setSiteInfo] = useState({ title: 'Instyte', logoUrl: '/assets/logo.png' });
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
-  const [showContactForm, setShowContactForm] = useState(false);
 
   useEffect(() => {
     async function fetchSiteInfo() {
@@ -25,7 +24,6 @@ function LoginPage() {
         document.title = 'Instyte';
       }
     }
-
     fetchSiteInfo();
   }, []);
 
@@ -37,7 +35,6 @@ function LoginPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
       });
-
       if (!response.ok) throw new Error('Login failed');
       const data = await response.json();
       localStorage.setItem('token', data.token);
@@ -49,23 +46,22 @@ function LoginPage() {
 
   return (
     <div className="login-page">
-      <LoginCard
-        siteInfo={siteInfo}
-        email={email}
-        setEmail={setEmail}
-        password={password}
-        setPassword={setPassword}
-        rememberMe={rememberMe}
-        setRememberMe={setRememberMe}
-        handleLogin={handleLogin}
-      />
-
-      <div className="contact-icon" onClick={() => setShowContactForm(true)}>
-        <span className="material-icons">contact_support</span>
+      <div className="login-left">
+        <AnnouncementsPanel />
       </div>
 
-      {showContactForm && (<ContactPopup onClose={() => setShowContactForm(false)} />
-      )}
+      <div className="login-right">
+        <LoginCard
+          siteInfo={siteInfo}
+          email={email}
+          setEmail={setEmail}
+          password={password}
+          setPassword={setPassword}
+          rememberMe={rememberMe}
+          setRememberMe={setRememberMe}
+          handleLogin={handleLogin}
+        />
+      </div>
     </div>
   );
 }
