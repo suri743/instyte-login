@@ -36,16 +36,13 @@ function ContactPopup({ onClose }) {
           <input type="text" placeholder="Username" required />
         </div>
 
-        <div className="input-wrapper textarea-wrapper">
-          {/* <span className="material-icons">description</span> */}
+        <div className="input-wrapper">
           <textarea placeholder="Issue Description" required></textarea>
         </div>
 
-        <div className="submit-button small-button">
-        <button type="submit" >
+        <button className="submit-button" type="submit">
           Submit
         </button>
-        </div>
       </form>
 
       {showSuccess && (

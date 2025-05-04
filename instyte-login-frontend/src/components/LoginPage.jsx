@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 import './LoginPage.css';
 import LoginCard from './LoginCard';
 import AnnouncementsPanel from './AnnouncementsPanel';
+import ContactPopup from './ContactPopup';
 
 function LoginPage() {
   const [siteInfo, setSiteInfo] = useState({ title: 'Instyte', logoUrl: '/assets/logo.png' });
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
+  const [showContactForm, setShowContactForm] = useState(false);
 
   useEffect(() => {
     async function fetchSiteInfo() {
@@ -62,6 +64,11 @@ function LoginPage() {
           handleLogin={handleLogin}
         />
       </div>
+      <div className="contact-icon" onClick={() => setShowContactForm(true)}>
+        <span className="material-icons">contact_support</span>
+      </div>
+      {showContactForm && (<ContactPopup onClose={() => setShowContactForm(false)} />
+      )}
     </div>
   );
 }

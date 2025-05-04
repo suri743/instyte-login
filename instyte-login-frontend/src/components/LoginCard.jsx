@@ -8,6 +8,7 @@ function LoginCard({ siteInfo, email, setEmail, password, setPassword, rememberM
   const [otpSent, setOtpSent] = useState(false);
   const [otp, setOtp] = useState('');
   const [error, setError] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
 
   const validateFields = () => {
     if (usePhoneLogin) {
@@ -67,15 +68,22 @@ function LoginCard({ siteInfo, email, setEmail, password, setPassword, rememberM
               />
             </div>
 
-            <div className="input-wrapper">
-              <span className="material-icons">lock</span>
-              <input
-                type="password"
+            <div className="input-wrapper password-wrapper">
+            <span className="material-icons">lock</span>
+            <input
+                type={showPassword ? "text" : "password"}
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-              />
-            </div>
+                />
+            <button
+                type="button"
+                className="eye-toggle"
+                onClick={() => setShowPassword((prev) => !prev)}>
+                <span className="material-icons">
+                  {showPassword ? "visibility_off" : "visibility"}</span>
+            </button>
+          </div>
 
             <div className="remember-forgot">
               <label>
@@ -98,7 +106,6 @@ function LoginCard({ siteInfo, email, setEmail, password, setPassword, rememberM
                   setPhoneNumber(onlyNums);
                 }}/>
             </div>
-
             {otpSent && (
               <div className="input-wrapper">
                 <span className="material-icons">key</span>
@@ -113,13 +120,12 @@ function LoginCard({ siteInfo, email, setEmail, password, setPassword, rememberM
           </>
         )}
 
-        <div className="submit-button">
-        <button type="submit" >
-          {usePhoneLogin ? (otpSent ? 'Verify & Login' : 'Send OTP') : 'Log in'}
-        </button></div>
+        <button className="submit-button" type="submit">
+            {usePhoneLogin ? (otpSent ? 'Verify & Login' : 'Send OTP') : 'Log in'}
+        </button>
       </form>
         <div>
-      <button className="submit-button alt-button"
+      <button className="alt-button"
         type="button"
         
         onClick={() => {
@@ -132,7 +138,7 @@ function LoginCard({ siteInfo, email, setEmail, password, setPassword, rememberM
           setError('');
         }}
       >
-        {usePhoneLogin ? 'Log in with Username' : 'Log in with Phone Number'}
+        {usePhoneLogin ? 'Log in with Username' : 'Log in with Phone'}
       </button>
       </div>
 

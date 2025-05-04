@@ -1,4 +1,3 @@
-// AnnouncementsPanel.jsx (Responsive Info Cards - Horizontal Layout)
 import React from 'react';
 import './LoginPage.css';
 
@@ -14,7 +13,9 @@ function AnnouncementsPanel() {
   const infoCards = [
     {
       title: 'Why choose Instyte?',
-      description: 'Empowering schools with smart CRM, attendance, fees, and academic tools — all in one place.',
+      description: 'Empowering schools with smart CRM, attendance, fees, and academic tools — all in one place.' +
+      'Empowering schools with smart CRM, attendance, fees, and academic tools — all in one place'
+      + 'Empowering schools with smart CRM, attendance, fees, and academic tools — all in one place',
       icon: '💡'
     },
     {
@@ -29,7 +30,8 @@ function AnnouncementsPanel() {
     },
     {
       title: 'Trusted by 500+ Schools',
-      description: 'Institutes across India trust Instyte for reliability, support and student growth.',
+      description: 'Empowering schools with smart CRM, attendance, fees, and academic tools — all in one place.' + 
+      + 'Empowering schools with smart CRM, attendance, fees, and academic tools — all in one place',
       icon: '🏫'
     },
     {
@@ -39,7 +41,9 @@ function AnnouncementsPanel() {
     },
     {
       title: 'Seamless Onboarding',
-      description: 'Get started in minutes with guided setup, training, and personal onboarding support.',
+      description: 'Empowering schools with smart CRM, attendance, fees, and academic tools — all in one place.' +
+      'Empowering schools with smart CRM, attendance, fees, and academic tools — all in one place'
+      + 'Empowering schools with smart CRM, attendance, fees, and academic tools — all in one place',
       icon: '🚀'
     }
   ];
@@ -54,19 +58,21 @@ function AnnouncementsPanel() {
         </div>
       </div>
 
-      <div className="info-card" style={{ marginBottom: '1.5rem' }}>
-      <div className="info-content">
-      <h2 className="announcement-title">📢 Announcements</h2>
-      </div>
-      <ul className="announcement-list">
-        {announcements.map((item, idx) => (
-          <li key={idx} className="announcement-item">
-            <span className="announcement-icon">{item.icon}</span>
-            <span className="announcement-text">{item.text}</span>
-          </li>
-        ))}
-      </ul>
-      </div>
+      <div className="info-card announcement-scroll-container" style={{ marginBottom: '1.5rem' }}>
+  <div className="info-content">
+    <h2 className="announcement-title">📢 Announcements</h2>
+  </div>
+  <div className="announcement-scroll-viewport">
+    <ul className="announcement-scroll-list">
+      {[...announcements, ...announcements].map((item, idx) => (
+        <li key={idx} className="announcement-item">
+          <span className="announcement-icon">{item.icon}</span>
+          <span className="announcement-text">{item.text}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>
 
 
       <div className="info-cards">
