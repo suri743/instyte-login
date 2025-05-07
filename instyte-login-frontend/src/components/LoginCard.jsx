@@ -13,6 +13,7 @@ function LoginCard({ siteInfo, email, setEmail, password, setPassword, rememberM
   const validateFields = () => {
     if (usePhoneLogin) {
       if (!phoneNumber) return 'Phone number is required';
+      if (phoneNumber.length < 10) return 'Phone number must be at least 10 digits';
       if (otpSent && !otp) return 'OTP is required';
     } else {
       if (!email) return 'Username is required';

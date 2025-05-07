@@ -11,6 +11,24 @@ function LoginPage() {
   const [rememberMe, setRememberMe] = useState(false);
   const [showContactForm, setShowContactForm] = useState(false);
 
+  const [currentTime, setCurrentTime] = useState('');
+
+  useEffect(() => {
+    const updateClock = () => {
+      const now = new Date();
+      let hours = now.getHours();
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const seconds = String(now.getSeconds()).padStart(2, '0');
+      const ampm = hours >= 12 ? 'PM' : 'AM';
+      hours = hours % 12 || 12; // Convert 0 to 12 for 12 AM
+      setCurrentTime(`${String(hours).padStart(2, '0')}:${minutes}:${seconds} ${ampm}`);
+    };
+  
+    updateClock();
+    const interval = setInterval(updateClock, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   useEffect(() => {
     async function fetchSiteInfo() {
       try {
@@ -47,7 +65,17 @@ function LoginPage() {
   };
 
   return (
-    <div className="login-page">
+    <div className="login-page-wrapper">
+    <img src="/assets/wave.svg" className="bg-decor-top-left" />
+    <img src="/assets/blob.svg" className="bg-decor-bottom-right" />
+    <div className="login-page" >
+    <div className="top-bar">
+      <div className="help-icon">
+        <span className="material-icons">cloud_upload</span> Help
+      </div>
+      <div className="clock">{currentTime}</div>
+    </div>
+
       <div className="login-left">
         <AnnouncementsPanel />
       </div>
@@ -65,10 +93,11 @@ function LoginPage() {
         />
       </div>
       <div className="contact-icon" onClick={() => setShowContactForm(true)}>
-        <span className="material-icons">contact_support</span>
+        <span className="material-icons">sms</span>
       </div>
       {showContactForm && (<ContactPopup onClose={() => setShowContactForm(false)} />
       )}
+    </div>
     </div>
   );
 }
